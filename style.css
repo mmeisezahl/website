@@ -1,0 +1,328 @@
+:root {
+    /* variables */
+    --background: #041C32;
+    --secondary: #04293A;
+    --tertiary: #064663;
+    --text: #EEEEEE;
+    --comp1: #ECB365;
+    --comp2: #65ECB3;
+    --comp3: #B365EC;
+    --exp: #EC6F65;
+}
+
+* {
+    /* reset */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    /* font-family: 'Open Sans', Helvetica, Arial, sans-serif; */
+    font-family: 'Merriweather', serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+section h2 {
+    font-size: 30px;
+}
+
+section a {
+    color: var(--comp1);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    font-family: 'Merriweather', serif;
+    flex-grow: 1;
+    padding-right: 3%;
+    padding-left: 3%;
+    padding-top: 2%;
+    line-height: 1.5;
+}
+
+tr {
+    vertical-align: top;
+}
+
+table {
+    border-spacing: 10px;
+}
+
+.header {
+    background-color: var(--secondary);
+    /* box-shadow: 1px 1px 5px 0px var(--tertiary); */
+    border-bottom: var(--tertiary) 2px solid;
+    padding-bottom: 15px;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.logo {
+    display: inline-block;
+    color: var(--text);
+    margin-left: 10px;
+    /* transition: 0.2s; */
+}
+
+.title {
+    font-size: 25pt;
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 5px 5px 10px black;
+}
+
+.ipa {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 18pt;
+    text-shadow: 5px 5px 10px black;
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+    /* position: fixed; */
+    position: sticky;
+    background-color: var(--secondary);
+    overflow: hidden;
+}
+
+.navigation-bar {
+    list-style: none;
+}
+
+.navigation-bar a {
+    text-decoration: none;
+    display: block;
+    padding: 30px;
+    font-size: 20px;
+    color: var(--text);
+}
+
+.navigation-bar a:hover {
+    background-color: var(--tertiary);
+}
+
+.nav {
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+.hamb {
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+.hamb-line {
+    background: var(--text);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+
+.hamb-line::before,
+.hamb-line::after {
+    background: var(--text);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before {
+    top: 5px;
+}
+
+.hamb-line::after {
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+}
+
+.side-menu:checked~nav {
+    max-height: 100%;
+}
+
+.side-menu:checked~.hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked~.hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.side-menu:checked~.hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0
+}
+
+@media (min-width: 820px) {
+    /* 768px */
+    main {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    .header {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .nav {
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+    }
+    .title {
+        font-size: 60pt;
+    }
+    .ipa {
+        font-size: 30pt;
+    }
+    .navigation-bar li {
+        float: left;
+    }
+    .navigation-bar a {
+        font-size: 25px;
+    }
+    .navigation-bar a:hover {
+        background-color: transparent;
+        color: var(--tertiary);
+    }
+    .hamb {
+        display: none;
+    }
+    .starting-page {
+        display: flex;
+        justify-content: space-around;
+        align-items: center
+    }
+    .portrait {
+        height: 30vw;
+        width: auto;
+    }
+}
+
+@media (max-width: 819px) {
+    .portrait {
+        height: 60vw;
+        width: auto;
+    }
+}
+
+@media (max-width: 430px) {
+    section h2 {
+        font-size: 25px;
+    }
+    .bibliography {
+        text-align: left !important;
+    }
+}
+
+.footer-general {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: var(--tertiary) 2px solid;
+}
+
+.footer-general li {
+    list-style-type: none;
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: space-around;
+}
+
+.socialmedia img {
+    width: 32px;
+}
+
+.workshop-title {
+    font-style: italic;
+}
+
+.introduction {
+    padding: 2vw;
+    flex: 1;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.pic {
+    flex: 0 1;
+    text-align: center;
+}
+
+.section-heading {
+    color: var(--exp);
+}
+
+.job-title {
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+.job-link {
+    font-weight: normal;
+}
+
+.job-description {
+    font-style: italic;
+}
+
+.time {
+    width: 17vw;
+    padding-right: 1vw;
+}
+
+.pub-date {
+    width: 8vw;
+    padding-right: 1vw;
+}
+
+.author-me {
+    font-weight: bold;
+}
+
+.contact {
+    font-weight: 300;
+}
+
+.contact-icon {
+    width: 32px;
+    height: auto;
+}
+
+.bibliography {
+    text-indent: -30px;
+    padding-left: 30px;
+    text-align: justify;
+}
+
+.emphatic {
+    font-style: italic;
+}
