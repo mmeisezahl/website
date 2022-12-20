@@ -176,7 +176,8 @@ table {
     top: 0
 }
 
-@media (min-width: 820px) {
+@media (min-width: 1014px) {
+    /* 820px */
     /* 768px */
     main {
         padding-right: 10%;
@@ -223,7 +224,8 @@ table {
     }
 }
 
-@media (max-width: 819px) {
+@media (max-width: 1013px) {
+    /* 819px */
     .portrait {
         height: 60vw;
         width: auto;
