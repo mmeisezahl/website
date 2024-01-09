@@ -50,17 +50,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const socialMedia = document.createElement('li');
     socialMedia.setAttribute('class', 'socialmedia');
 
-    // twitter
-    const twitterLink = document.createElement('a');
-    twitterLink.setAttribute('href', 'https://twitter.com/MMeisezahl');
-    twitterLink.setAttribute('target', '_blank');
+    // // twitter
+    // const twitterLink = document.createElement('a');
+    // twitterLink.setAttribute('href', 'https://twitter.com/MMeisezahl');
+    // twitterLink.setAttribute('target', '_blank');
 
-    const twitterIcon = document.createElement('img');
-    twitterIcon.setAttribute('alt', 'Twitter logo');
-    twitterIcon.setAttribute('src', 'img/twitter_dark.png');
+    // const twitterIcon = document.createElement('img');
+    // twitterIcon.setAttribute('alt', 'Twitter logo');
+    // twitterIcon.setAttribute('src', 'img/twitter_dark.png');
 
-    twitterLink.appendChild(twitterIcon);
-    socialMedia.appendChild(twitterLink);
+    // twitterLink.appendChild(twitterIcon);
+    // socialMedia.appendChild(twitterLink);
 
 
     // github
@@ -85,9 +85,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
     footerList.appendChild(socialMedia);
     footerList.appendChild(copyright);
 });
-
-// function setAttributes(el, attributes) {
-//     Object.keys(attributes).forEach(key => el.setAttribute(key, attributes[key]));
-// }
-
-//// window height ////
